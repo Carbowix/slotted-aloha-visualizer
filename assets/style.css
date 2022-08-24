@@ -1,0 +1,228 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FF3706);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin: auto;
+    width: 95%;
+    height: 95%;
+    padding: 1vh;
+}
+
+.containerItem {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.parametersArea {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.formParameters {
+    display: flex;
+    flex-direction:
+        column;
+    gap: 1vh;
+}
+
+.decisionArea {
+    display: flex;
+    justify-content: center;
+}
+
+.tableArea {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    width: 80%;
+    max-height: 80%;
+}
+
+.tableArea>div {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+/*
+    No. of Nodes, Timeslots, initial send probability, retransmit probability
+*/
+h2 {
+
+    font-size: 5vh;
+    background-color: red;
+
+    /* Create the gradient. */
+    background-image: linear-gradient(to right, #e052a0, #f15c41);
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+h3 {
+    font-size: 3.5vh;
+}
+
+h4 {
+    font-size: 2.5vh;
+}
+
+label {
+    width: 15vw;
+    display: inline-block;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 20%;
+}
+
+.startBtn {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    background-color: #e6375a !important;
+    height: 48px;
+}
+
+.startBtn:hover {
+    transform: scale(1.04);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+hr {
+    border-width: 0 0 .2vh;
+    color: skyblue;
+    border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), grey 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
+    border-style: solid;
+    margin: 2vh
+}
+
+/* SCROLL STUFF */
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: darkgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
+
+
+
+/* TABLE STUFF */
+tbody tr {
+    border-top: .2vh solid rgba(0, 0, 0, 0.3)
+}
+
+th,
+td {
+    padding: 2vh;
+    border-right: .2vh solid black;
+}
+
+thead tr th,
+tbody tr td:first-child {
+    text-align: center;
+    color: white;
+    background-color: #34495e;
+}
+
+thead tr th:first-child,
+tbody tr td:first-child {
+    position: sticky;
+    left: 0;
+    font-weight: bold;
+}
+
+
+
+.timeSlot {
+   
+    position: sticky;
+    top: 0;
+}
+
+.collision {
+    background-color: #e74c3c;
+}
+
+.success {
+    background-color: #2ecc71;
+}
+
+.empty {
+    background-color: #fff;
+}
+
+#timelinePacket {
+   
+    text-align: center;
+}
+
+#visual {
+    display: none;
+}
